@@ -1,0 +1,73 @@
+.hero { background: var(--green-dark); padding: 140px 0 80px; position: relative; overflow: hidden; }
+.heroBg { position: absolute; inset: 0; background: radial-gradient(ellipse 50% 70% at 80% 50%, rgba(168,213,48,.07) 0%, transparent 60%); pointer-events: none; }
+.heroGrid { display: grid; grid-template-columns: 1fr 400px; gap: 60px; align-items: start; position: relative; z-index: 2; }
+.breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 12px; color: rgba(255,255,255,.4); margin-bottom: 24px; }
+.breadcrumb a { color: rgba(255,255,255,.5); text-decoration: none; transition: color .2s; }
+.breadcrumb a:hover { color: white; }
+.breadcrumb span { color: rgba(255,255,255,.3); }
+.tag { display: inline-block; background: var(--lime); color: var(--green-dark); font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+.heroH1 { font-family: var(--font-display); font-size: clamp(28px,3.8vw,50px); font-weight: 600; line-height: 1.1; letter-spacing: -0.03em; color: white; margin-bottom: 20px; }
+.heroDesc { font-size: 17px; color: rgba(255,255,255,.6); font-weight: 300; line-height: 1.7; margin-bottom: 28px; }
+.heroMeta { display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 28px; font-size: 14px; color: rgba(255,255,255,.65); }
+.instructorStrip { display: flex; align-items: center; gap: 12px; padding: 14px 18px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.1); border-radius: 12px; margin-bottom: 24px; }
+.instructorAv { width: 42px; height: 42px; border-radius: 50%; background: rgba(168,213,48,.2); color: var(--lime); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 15px; font-weight: 600; flex-shrink: 0; }
+.instructorName { font-size: 14px; font-weight: 600; color: white; margin-bottom: 2px; }
+.instructorTitle { font-size: 12px; color: rgba(255,255,255,.45); }
+.heroImgPlaceholder { height: 220px; border-radius: 16px; background: linear-gradient(135deg,#2d4a2d,#3d6b3d,#5a8f3c); position: relative; overflow: hidden; }
+.heroImgPlaceholder::after { content: 'Zenith Pro — Live Session'; position: absolute; bottom: 16px; left: 16px; background: rgba(255,255,255,.15); backdrop-filter: blur(8px); border-radius: 6px; padding: 4px 10px; font-size: 11px; font-weight: 600; color: white; letter-spacing: .06em; text-transform: uppercase; }
+.enrollCard { background: white; border-radius: 20px; padding: 28px; box-shadow: 0 16px 48px rgba(0,0,0,.2); position: sticky; top: 88px; }
+.enrollPrice { font-family: var(--font-display); font-size: 40px; font-weight: 700; color: var(--charcoal); letter-spacing: -0.04em; margin-bottom: 4px; }
+.enrollPeriod { font-size: 13px; color: var(--gray-text); font-weight: 300; margin-bottom: 20px; }
+.enrollCta { display: block; text-align: center; width: 100%; padding: 15px; background: var(--lime); color: var(--green-dark); border-radius: 12px; font-weight: 700; font-size: 16px; border: none; cursor: pointer; font-family: var(--font-body); transition: all .2s; margin-bottom: 10px; text-decoration: none; }
+.enrollCta:hover { background: var(--lime-bright); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(168,213,48,.3); }
+.enrollTrial { display: block; text-align: center; padding: 12px; background: white; color: var(--green-dark); border-radius: 10px; font-weight: 500; font-size: 14px; border: 1.5px solid var(--gray-light); cursor: pointer; font-family: var(--font-body); transition: all .2s; margin-bottom: 20px; text-decoration: none; }
+.enrollTrial:hover { border-color: var(--green-accent); color: var(--green-accent); }
+.enrollIncludes { display: flex; flex-direction: column; gap: 10px; border-top: 1px solid var(--gray-light); padding-top: 18px; }
+.enrollItem { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: var(--charcoal); }
+.enrollCheck { width: 18px; height: 18px; border-radius: 50%; background: rgba(168,213,48,.2); color: var(--green-accent); display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+.enrollGuarantee { text-align: center; font-size: 11px; color: var(--gray-text); margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--gray-light); }
+.contentSection { padding: 80px 0; background: var(--off-white); }
+.contentGrid { display: grid; grid-template-columns: 1fr 360px; gap: 60px; align-items: start; }
+.contentBlock { margin-bottom: 52px; }
+.blockTitle { font-family: var(--font-display); font-size: 24px; font-weight: 600; color: var(--charcoal); letter-spacing: -0.02em; margin-bottom: 24px; padding-bottom: 14px; border-bottom: 2px solid var(--gray-light); }
+.outcomesGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.outcomeItem { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: var(--charcoal); background: white; border: 1px solid var(--gray-light); border-radius: 12px; padding: 14px; }
+.outcomeCheck { color: var(--lime); font-weight: 700; font-size: 16px; flex-shrink: 0; }
+.module { background: white; border: 1px solid var(--gray-light); border-radius: 14px; margin-bottom: 10px; overflow: hidden; }
+.module[open] summary .moduleToggle { transform: rotate(45deg); }
+.moduleHead { display: flex; align-items: center; padding: 16px 22px; cursor: pointer; list-style: none; gap: 8px; }
+.moduleHead::-webkit-details-marker { display: none; }
+.moduleHead:hover { background: var(--off-white); }
+.moduleTitle { font-size: 15px; font-weight: 600; color: var(--charcoal); flex: 1; }
+.moduleMeta { font-size: 12px; color: var(--gray-text); font-weight: 300; white-space: nowrap; }
+.moduleToggle { color: var(--green-accent); font-size: 20px; font-weight: 300; line-height: 1; transition: transform .2s; flex-shrink: 0; }
+.moduleBody { padding: 0 22px 14px; border-top: 1px solid var(--gray-light); }
+.lesson { display: flex; align-items: center; gap: 10px; padding: 10px 0; font-size: 13px; color: var(--gray-text); border-bottom: 1px solid var(--gray-light); }
+.lesson:last-child { border-bottom: none; }
+.lessonIcon { width: 26px; height: 26px; border-radius: 8px; background: var(--cream); display: flex; align-items: center; justify-content: center; font-size: 11px; flex-shrink: 0; }
+.facultyCard { display: flex; align-items: flex-start; gap: 20px; background: white; border: 1px solid var(--gray-light); border-radius: 20px; padding: 28px; }
+.facultyAv { width: 68px; height: 68px; border-radius: 50%; background: var(--green-dark); color: white; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 22px; font-weight: 600; flex-shrink: 0; }
+.facultyName { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--charcoal); margin-bottom: 4px; }
+.facultyRole { font-size: 12px; color: var(--green-accent); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; margin-bottom: 12px; }
+.facultyBio { font-size: 14px; color: var(--gray-text); line-height: 1.7; font-weight: 300; }
+.facultyStats { display: flex; gap: 24px; margin-top: 16px; }
+.facultyStatNum { font-family: var(--font-display); font-size: 20px; font-weight: 700; color: var(--charcoal); letter-spacing: -0.03em; }
+.facultyStatLabel { font-size: 11px; color: var(--gray-text); text-transform: uppercase; letter-spacing: .06em; }
+.sidebar { position: sticky; top: 88px; display: flex; flex-direction: column; gap: 20px; }
+.sideTestimonial { background: var(--green-dark); border-radius: 20px; padding: 24px; }
+.sideQuote { font-family: var(--font-display); font-size: 52px; color: var(--lime); line-height: .8; margin-bottom: 12px; font-style: italic; }
+.sideQuoteText { font-size: 14px; color: rgba(255,255,255,.75); line-height: 1.65; font-weight: 300; margin-bottom: 16px; }
+.sideAuthor { display: flex; align-items: center; gap: 10px; }
+.sideAuthorAv { width: 36px; height: 36px; border-radius: 50%; background: rgba(168,213,48,.2); color: var(--lime); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600; flex-shrink: 0; }
+.sideAuthorName { font-size: 13px; font-weight: 600; color: white; }
+.sideAuthorRole { font-size: 11px; color: rgba(255,255,255,.45); }
+.relatedCard { background: white; border: 1px solid var(--gray-light); border-radius: 20px; padding: 22px; }
+.relatedTitle { font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--lime-bright); background: var(--green-dark); margin: -22px -22px 16px; padding: 14px 22px; border-radius: 20px 20px 0 0; }
+.relatedItem { display: flex; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--gray-light); cursor: pointer; transition: opacity .2s; text-decoration: none; }
+.relatedItem:last-of-type { border-bottom: none; }
+.relatedItem:hover { opacity: .7; }
+.relatedThumb { width: 56px; height: 56px; border-radius: 10px; background: linear-gradient(135deg, #2d4a2d, #5a8f3c); flex-shrink: 0; }
+.relatedName { font-size: 13px; font-weight: 500; color: var(--charcoal); line-height: 1.35; margin-bottom: 4px; }
+.relatedPrice { font-size: 13px; color: var(--green-accent); font-weight: 600; }
+@media (max-width: 1024px) { .heroGrid, .contentGrid { grid-template-columns: 1fr; } .enrollCard { position: static; } .sidebar { position: static; } .outcomesGrid { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .heroMeta { gap: 12px; font-size: 12px; } }

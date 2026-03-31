@@ -1,0 +1,57 @@
+.hero { min-height: 60vh; background: var(--green-dark); padding: 140px 0 80px; position: relative; overflow: hidden; display: flex; align-items: center; }
+.heroBg { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 80% at 70% 50%, rgba(168,213,48,.06) 0%, transparent 60%); pointer-events: none; }
+.heroContent { position: relative; z-index: 2; max-width: 700px; }
+.heroH1 { font-family: var(--font-display); font-size: clamp(38px,5vw,68px); font-weight: 600; line-height: 1.06; letter-spacing: -0.03em; color: white; margin-bottom: 24px; }
+.heroH1 em { font-style: italic; color: var(--lime); }
+.heroSub { font-size: 18px; color: rgba(255,255,255,.58); font-weight: 300; line-height: 1.7; margin-bottom: 40px; }
+.heroStats { display: flex; gap: 48px; }
+.heroStatNum { font-family: var(--font-display); font-size: 32px; font-weight: 700; color: white; letter-spacing: -0.04em; margin-bottom: 4px; }
+.heroStatLabel { font-size: 11px; color: rgba(255,255,255,.38); text-transform: uppercase; letter-spacing: .08em; }
+.filterBar { background: white; border-bottom: 1px solid var(--gray-light); position: sticky; top: 72px; z-index: 99; }
+.filterInner { display: flex; align-items: center; gap: 10px; padding: 14px 48px; overflow-x: auto; scrollbar-width: none; max-width: 1200px; margin: 0 auto; }
+.filterInner::-webkit-scrollbar { display: none; }
+.filterChip { padding: 8px 18px; border-radius: 20px; font-size: 13px; font-weight: 500; cursor: pointer; border: 1.5px solid var(--gray-light); background: white; color: var(--gray-text); transition: all 0.2s; white-space: nowrap; font-family: var(--font-body); }
+.filterChip:hover { border-color: var(--green-accent); color: var(--green-accent); }
+.filterChipActive { background: var(--green-dark) !important; color: white !important; border-color: var(--green-dark) !important; }
+.coursesSection { padding: 60px 0 100px; background: var(--off-white); }
+.coursesGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.courseCard { border-radius: 20px; overflow: hidden; border: 1px solid var(--gray-light); background: white; transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; cursor: pointer; position: relative; text-decoration: none; display: block; }
+.courseCard:hover { transform: translateY(-8px); box-shadow: 0 20px 60px rgba(0,0,0,.12); border-color: rgba(168,213,48,.5); }
+.featuredCard { grid-column: span 2; background: var(--green-dark); border-color: var(--green-dark); }
+.featuredCard:hover { border-color: var(--lime); box-shadow: 0 20px 60px rgba(26,46,26,.3); }
+.courseImg { height: 220px; position: relative; overflow: hidden; }
+.featuredCard .courseImg { height: 280px; }
+.courseImgBg { position: absolute; inset: 0; transition: transform 0.5s ease; }
+.courseCard:hover .courseImgBg { transform: scale(1.06); }
+.coursePrice { position: absolute; bottom: 14px; right: 14px; background: #e8440a; color: white; font-size: 14px; font-weight: 700; padding: 6px 14px; border-radius: 8px; z-index: 2; transition: transform 0.2s; }
+.courseCard:hover .coursePrice { transform: scale(1.05); }
+.courseBody { padding: 22px 26px 26px; }
+.courseInstructor { font-size: 12px; color: var(--gray-text); margin-bottom: 8px; }
+.featuredCard .courseInstructor { color: rgba(255,255,255,.45); }
+.courseTag { display: inline-block; background: var(--lime); color: var(--green-dark); font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; }
+.courseName { font-family: var(--font-display); font-size: 19px; font-weight: 600; color: var(--charcoal); line-height: 1.25; letter-spacing: -0.02em; margin-bottom: 14px; }
+.featuredCard .courseName { font-size: 25px; color: white; }
+.courseMeta { display: flex; gap: 14px; font-size: 12px; color: var(--gray-text); flex-wrap: wrap; }
+.featuredCard .courseMeta { color: rgba(255,255,255,.45); }
+.hoverOverlay { position: absolute; inset: 0; background: rgba(26,46,26,0.93); display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 14px; padding: 28px; text-align: center; opacity: 0; transition: opacity 0.3s ease; pointer-events: none; }
+.courseCard:hover .hoverOverlay { opacity: 1; pointer-events: all; }
+.hoverTitle { font-family: var(--font-display); font-size: 17px; font-weight: 600; color: white; margin-bottom: 4px; }
+.hoverIncludes { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.hoverIncludes li { font-size: 13px; color: rgba(255,255,255,.8); display: flex; align-items: center; gap: 8px; }
+.hoverIncludes li::before { content: '✓'; color: var(--lime); font-weight: 700; flex-shrink: 0; }
+.hoverCta { background: var(--lime); color: var(--green-dark); padding: 11px 26px; border-radius: 10px; font-weight: 600; font-size: 14px; transition: all 0.2s; margin-top: 4px; }
+.courseCard:hover .hoverCta:hover { background: var(--lime-bright); transform: scale(1.04); }
+.compSection { padding: 80px 0; background: var(--cream); }
+.compTable { background: white; border-radius: 20px; overflow: hidden; border: 1px solid var(--gray-light); margin-top: 48px; }
+.compHead { display: grid; grid-template-columns: 200px repeat(3,1fr); background: var(--green-dark); }
+.compHeadCell { padding: 18px 22px; font-size: 13px; font-weight: 600; color: rgba(255,255,255,.7); text-align: center; }
+.compHeadCell:first-child { text-align: left; color: rgba(255,255,255,.4); }
+.compFeatured { background: rgba(168,213,48,.15) !important; color: white !important; }
+.compRow { display: grid; grid-template-columns: 200px repeat(3,1fr); border-top: 1px solid var(--gray-light); transition: background 0.15s; }
+.compRow:hover { background: var(--off-white); }
+.compCell { padding: 15px 22px; font-size: 14px; color: var(--charcoal); text-align: center; display: flex; align-items: center; justify-content: center; }
+.compRowLabel { text-align: left; justify-content: flex-start; font-weight: 500; color: var(--gray-text); font-size: 13px; }
+.check { color: var(--green-accent); font-size: 18px; font-weight: 700; }
+.cross { color: #ccc; font-size: 18px; }
+@media (max-width: 1024px) { .coursesGrid { grid-template-columns: 1fr 1fr; } .featuredCard { grid-column: span 2; } }
+@media (max-width: 640px) { .coursesGrid { grid-template-columns: 1fr; } .featuredCard { grid-column: span 1; } .filterInner { padding: 14px 24px; } .compHead, .compRow { grid-template-columns: 120px repeat(3,1fr); } }
