@@ -208,7 +208,7 @@ export default function AboutPage() {
               {
                 num: '#1',
                 title: 'Live Exam in India',
-                desc: 'India's Largest Live Dental Exam — real competition, real benchmarking, real preparation.',
+               desc: "India's Largest Live Dental Exam — real competition, real benchmarking, real preparation.",
                 color: '#3d6b3d',
               },
             ].map((w, i) => (
